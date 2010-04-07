@@ -1,0 +1,18 @@
+FALLING BLOCKS
+
+This is done as a bit of fun.
+Feel free to muck about it.
+
+
+Requirements
+Ruby
+Rubygems
+Gosu
+
+
+Platform
+Mac
+Windows (You might need to change the slashes in the requires in the main.rb file
+
+
+Phil Cooper-King
