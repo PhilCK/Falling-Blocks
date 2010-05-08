@@ -46,17 +46,24 @@ class FunkyGameMode
     
     if @stage.falling_block
       
-      if id == Gosu::KbLeft || id == Gosu::KbA
-        @stage.falling_block.move([-1, 0])
+      if @button_counter > 10 || @button_counter == 0
+      
+        if id == Gosu::KbLeft || id == Gosu::KbA
+          @stage.falling_block.move([-1, 0])
+        end
+      
+        if id == Gosu::KbRight || id == Gosu::KbD
+          @stage.falling_block.move([1, 0])
+        end
+      
       end
       
-      if id == Gosu::KbRight || id == Gosu::KbD
-        @stage.falling_block.move([1, 0])
-      end
   
       if id == Gosu::KbSpace || id == Gosu::KbS
         @stage.falling_block.move([0, 1])
       end
+      
+      @button_counter += 1
       
     end
     
@@ -65,6 +72,7 @@ class FunkyGameMode
   
   def button_up(id)
     @button_status = false
+    @button_counter = 0
   end
 
   

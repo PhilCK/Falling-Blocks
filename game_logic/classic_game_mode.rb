@@ -7,6 +7,7 @@ class ClassicGameMode
     @song = Gosu::Song.new(@gosu, MEDIA + 'Transpose.mp3')
     @song.volume = 0.03
     @button_status  = false
+    @button_counter = 0
     @last_button    = nil
     @button_counter = 90
     @button_press   = Gosu::milliseconds
@@ -46,17 +47,24 @@ class ClassicGameMode
     
     if @stage.falling_block
       
-      if id == Gosu::KbLeft || id == Gosu::KbA
-        @stage.falling_block.move([-1, 0])
+      if @button_counter > 10 || @button_counter == 0
+      
+        if id == Gosu::KbLeft || id == Gosu::KbA
+          @stage.falling_block.move([-1, 0])
+        end
+      
+        if id == Gosu::KbRight || id == Gosu::KbD
+          @stage.falling_block.move([1, 0])
+        end
+      
       end
       
-      if id == Gosu::KbRight || id == Gosu::KbD
-        @stage.falling_block.move([1, 0])
-      end
   
       if id == Gosu::KbSpace || id == Gosu::KbS
         @stage.falling_block.move([0, 1])
       end
+      
+      @button_counter += 1
       
     end
     
@@ -65,6 +73,7 @@ class ClassicGameMode
   
   def button_up(id)
     @button_status = false
+    @button_counter = 0
   end
 
   
