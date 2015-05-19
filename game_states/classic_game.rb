@@ -15,7 +15,7 @@ class ClassicGame < State
     
     @score_per_line = 10
     @score_multiplier = 10
-    
+
     @game = ClassicGameMode.new(gosu)
   end
   

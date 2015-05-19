@@ -1,18 +1,23 @@
-FALLING BLOCKS
 
-This is done as a bit of fun.
-Feel free to muck about it.
-
-
-Requirements
-Ruby
-Rubygems
-Gosu
+# Falling Blocks
+This was a little game I wrote ages ago when I was getting into game programming.
 
 
-Platform
-Mac
-Windows (You might need to change the slashes in the requires in the main.rb file)
+## Controls
+- Menu: `up` and `down` to navigate. `enter` to start a mode.
+- In-game: `left` and `right` to move. `space bar` to drop. `up` to rotate.
+- Game-Over: `enter` to continue.
+- Quit: `escape` at any point to close the application.
 
 
-Phil Cooper-King
+## Platform
+I would expect anything that runs Gosu/Ruby should run this, but only tested on OSX.
+
+
+## Requirements
+- Ruby 1.8+ (Tested on 2.1.5)
+- Gosu 0.8+
+
+
+## License
+Public

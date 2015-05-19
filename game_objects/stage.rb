@@ -43,7 +43,7 @@ class Stage
     
     #initial block
     self.falling_block = FallingBlock.new(self)
-    self.image = Gosu::Image.new(@gosu, MEDIA + "block.png")
+    self.image = Gosu::Image.new(@gosu, MEDIA + "block.png", true)
     
     #initial tick
     self.tick_length = 500

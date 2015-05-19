@@ -39,8 +39,9 @@ class Game < Gosu::Window
   
   
   def next_state(state)
+
     self.current_state = eval(STATE[state])
-  
+    
     rescue TypeError
       self.current_state = eval(STATE[:main_menu])
       puts "State Not Found! Defaulting to Main Menu"
