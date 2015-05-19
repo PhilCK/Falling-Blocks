@@ -16,7 +16,7 @@ I would expect anything that runs Gosu/Ruby should run this, but only tested on 
 
 ## Requirements
 - Ruby 1.8+ (Tested on 2.1.5)
-- Gosu 0.8+
+- Gosu 0.8+ ([https://github.com/jlnr/gosu](https://github.com/jlnr/gosu))
 
 
 ## License
